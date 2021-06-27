@@ -92,3 +92,33 @@ body {
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
 }
+
+@media(max-width: 740px) {
+    .left-slide > div > h1 {
+        font-size: 25px;
+    }
+
+    .left-slide > div > p {
+        font-size: 12px;
+    }
+
+    .action-buttons > button {
+        font-size: 15px;
+        padding: 8px;
+    }
+}
+
+@media(max-width:500px) {
+    .left-slide > div > h1 {
+        font-size: 18px;
+    }
+
+    .left-slide > div > p {
+        font-size: 10px;
+    }
+
+    .action-buttons > button {
+        font-size: 12px;
+        padding: 5px;
+    }
+}
