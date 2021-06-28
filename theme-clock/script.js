@@ -38,7 +38,7 @@ function setTime() {
     hourNeedle.style.transform = `translate(-50%, -100%) rotate(${scale(hoursForClock, 0, 11, 0, 360)}deg)`;
     minuteNeedle.style.transform = `translate(-50%, -100%) rotate(${scale(minutes, 0, 59, 0, 360)}deg)`;
     secondNeedle.style.transform = `translate(-50%, -100%) rotate(${scale(seconds, 0, 59, 0, 360)}deg)`;
-    timeEle.innerHTML = `${hours}:${minutes > 9 ? minutes : '0'+minutes} ${ampm}`;
+    timeEle.innerHTML = `${hoursForClock}:${minutes > 9 ? minutes : '0'+minutes} ${ampm}`;
     dateEle.innerHTML = `${days[day]}, ${months[month]} <span class="circle">${date}</span>`
 }
 
