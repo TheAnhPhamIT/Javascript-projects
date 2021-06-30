@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Muli', sans-serif;
+}
+
+p.text {
+    color: #777;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin: 0;
+}
+
+img.logo {
+    width: 250px;
+}
+
+.nav-btn {
+    font-size: 20px;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.nav-btn:focus {
+    outline: none;
+}
+
+.open-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in;
+}
+
+.nav.visible {
+    transform: translateX(0);
+}
+
+ul.list {
+    margin: 0;
+}
+
+ul li {
+    list-style-type: none;
+    margin: 10px 0;
+}
+
+ul li a {
+    color: #111;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.nav-black {
+    background: #111;
+    width: 60%;
+    max-width: 480px;
+    min-width: 320px;
+    transition-delay: 0.4s;
+}
+
+.nav-black.visible {
+    transition-delay: 0s;
+}
+
+.nav-red {
+    width: 95%;
+    background: #e74c3c;
+    transition-delay: 0.2s;
+}
+
+.nav-red.visible {
+    transition-delay: 0.2s;
+}
+
+.nav-white {
+    width: 95%;
+    background: #fff;
+    position: relative;
+    transition-delay: 0s;
+}
+
+.nav-white.visible {
+    transition-delay: 0.4s;
+}
+
+.nav-white img.logo {
+    width: 200px;
+}
+
+.close-btn {
+    position: absolute;
+    right: 25px;
+    top: 30px;
+    opacity: 0.3;
+    transition: 0.4s ease;
+}
+
+.close-btn:hover {
+    opacity: 0.9;
+}
