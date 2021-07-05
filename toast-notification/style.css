@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background-color: rebeccapurple;
+}
+
+#show-toast {
+    background-color: #fff;
+    color: rebeccapurple;
+    font-family: inherit;
+    border: 0;
+    cursor: pointer;
+    padding: 10px 30px;
+    font-weight: 800;
+    border-radius: 3px;
+}
+
+#show-toast:active {
+    transform: scale(0.98);
+}
+
+#show-toast:focus {
+    outline: none;
+}
+
+.toasts {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.toast {
+    width: 300px;
+    background-color: #fff;
+    color: rebeccapurple;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border-radius: 3px;
+    animation: showToast 0.4s ease;
+    transition: transform 0.3s ease;
+}
+
+.toast.hide {
+    transform: translateX(120%);
+    animation: hideToast 0.4s ease-in-out;
+}
+
+.toast.success {
+    color: #2ecc71;
+}
+
+.toast.warning {
+    color: #f1c40f;
+}
+
+.toast.error {
+    color: #e74c3c;
+}
+
+.toast.info {
+    color: #3498db;
+}
+
+.toast:hover {
+    transform: scale(1.1);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes showToast {
+    0% {
+        transform: translateX(120%);
+    }
+
+    30% {
+        transform: translateX(80%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes hideToast {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(120%);
+    }
+}
