@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.btn-magic {
+    background: #f39c12;
+    color: #fff;
+    border: 0;
+    padding: 0.6rem 2rem;
+    font-size: 1.2rem;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+    box-shadow: 0 5px #f1c40f;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    position: absolute;
+    top: 40px;
+}
+
+.btn-magic:focus {
+    outline: none;
+}
+
+.btn-magic:active {
+    transform: scale(0.98);
+}
+
+.boxes {
+    display: flex;
+    width: 500px;
+    height: 500px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 80px;
+}
+
+.boxes.big {
+    width: 600px;
+    height: 600px;
+}
+
+.box {
+    background-image: url('https://media.giphy.com/media/MF4gHGVeCOXAc/giphy.gif');
+    background-repeat: no-repeat;
+    background-size: 500px 500px;
+    width: 125px;
+    height: 125px;
+    transition: transform 0.4s ease;
+    position: relative;
+}
+
+.boxes.big .box::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    right: -15px;
+    height: 100%;
+    width: 15px;
+    background: #f1c40f;
+    transform: skewY(45deg);
+}
+
+.boxes.big .box::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    bottom: -15px;
+    height: 15px;
+    width: 100%;
+    background: #f1c40f;
+    transform: skewX(45deg);
+}
+
+.boxes.big .box {
+    transform: rotateZ(360deg);
+}
