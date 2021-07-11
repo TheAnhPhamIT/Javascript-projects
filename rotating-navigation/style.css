@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    height: 100vh;
+    overflow-x: hidden;
+    background: #333;
+    color: #222;
+}
+
+.container {
+    background: #fafafa;
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+}
+
+.container.show-nav {
+    transform: rotate(-18deg);
+}
+
+.content {
+    padding: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.content h1 {
+    margin-bottom: 0;
+}
+
+.content p {
+    line-height: 1.5;
+    color: #444;
+}
+
+.content img {
+    width: 100%;
+}
+
+.circle-container {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    background:#fc5c65;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+.circle button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: transparent;
+    border: 0;
+    font-size: 1.6rem;
+    color: #fff;
+    height: 100px;
+    cursor: pointer;
+}
+
+.circle button.btn-open {
+    left: 60%;
+}
+
+.circle button.btn-close {
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+.container.show-nav .circle{
+    transform: rotate(-70deg);
+}
+
+nav {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    color: #fff;
+    margin: 0;
+    padding: 40px;
+}
+
+nav ul li {
+    margin: 20px 0;
+    transform: translateX(-100%);
+    transition: transform 0.5s linear;
+}
+
+nav ul li + li {
+    transform: translateX(-150%);
+}
+
+nav ul li + li + li {
+    transform: translateX(-200%);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+nav ul li a i {
+    margin-right: 10px
+}
+
+nav ul li + li {
+    margin-left: 15px;
+}
+
+nav ul li + li + li {
+    margin-left: 30px;
+}
+
+.container.show-nav + nav ul li{
+    transition-delay: 0.4s;
+    transform: translateX(0);
+}
