@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./style.css">
+    <title>Responsive side navigation bar</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-content">
+            <div class="logo">
+                <i class='bx bxl-c-plus-plus'></i>
+                <div class="logo-name">Coding lab</div>
+            </div>
+            <button class="btn nav-btn">
+                <i class='bx bx-menu' ></i>
+            </button>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <a href="#" class="search-box">
+                    <i class='bx bx-search search-btn'></i>
+                    <input class="search-input" type="text" placeholder="Search...">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-dashboard' ></i>
+                    <div class="link-name">Dashboard</div>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-user' ></i>
+                    <div class="link-name">User</div>
+                </a>
+                <span class="tooltip">User</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-chat' ></i>
+                    <div class="link-name">Messages</div>
+                </a>
+                <span class="tooltip">Messages</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-pie-chart-alt-2' ></i>
+                    <div class="link-name">Analytics</div>
+                </a>
+                <span class="tooltip">Analytics</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-folder' ></i>
+                    <div class="link-name">File Manager</div>
+                </a>
+                <span class="tooltip">File manager</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-cart' ></i>
+                    <div class="link-name">Order</div>
+                </a>
+                <span class="tooltip">Order</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-heart' ></i>
+                    <div class="link-name">Saved</div>
+                </a>
+                <span class="tooltip">Saved</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-cog' ></i>
+                    <div class="link-name">Setting</div>
+                </a>
+                <span class="tooltip">Setting</span>
+            </li>
+        </ul>
+        <div class="profile-content">
+            <div class="profile">
+                <div class="profile-detail">
+                    <img src="./imgs/avatar.jpg" alt="avatar">
+                    <div class="name-job">
+                        <div class="name">Tom</div>
+                        <div class="job">Web Developer</div>
+                    </div>
+                </div>
+                <button class="btn logout-btn">
+                    <i class='bx bx-log-in'></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <h2>Home page</h2>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
